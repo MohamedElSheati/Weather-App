@@ -1,0 +1,36 @@
+body{
+    background-image: url(../images/banner.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+#searchInput{
+    background-color: #1e202b;
+}
+.item{
+    color: #bfc1c8;
+        font-family: "Roboto", "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.5;
+        background-color: #323544;
+}
+#today-condition-text,#next-condition-text{
+    color: #009ad8;
+}
+.info{
+    font-size: 6.4285714286rem;
+    margin-right: 30px;
+}
+.two{
+    background-color: #262936;
+}
+input[type="button"]{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            bottom: 5px;
+            padding: 0px 50px;
+            border-radius: 30px;
+            
+
+}

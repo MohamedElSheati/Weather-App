@@ -1,36 +1,106 @@
-body{
-    background-image: url(../images/banner.png);
-    background-attachment: fixed;
-    background-size: cover;
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../webfonts/Roboto-Light.ttf);
 }
-#searchInput{
+
+body{
+    
+    font-family: "Roboto", "Open Sans", sans-serif;
+    /* font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5; */
+}
+.navbar{
     background-color: #1e202b;
 }
-.item{
-    color: #bfc1c8;
-        font-family: "Roboto", "Open Sans", sans-serif;
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 1.5;
-        background-color: #323544;
+.navbar-brand{
+    padding: 30px 0px;
 }
-#today-condition-text,#next-condition-text{
+.navbar-brand .site-title{
+    margin: 0;
+    font-size: 1.1428571429em;
+    color: white;
+}
+.navbar-brand .site-desc{
+    font-size: 0.7142857143em;
+    color: #bfc1c8;
+}
+.nav-item{
+    padding: 0rem 1.5rem;
+    margin-right: 1rem;
+    border-radius: 30px;
+}
+.nav-item:hover {
+    border: 2px solid #009ad8;
+}
+.nav-item:hover .nav-link{
     color: #009ad8;
 }
-.info{
-    font-size: 6.4285714286rem;
-    margin-right: 30px;
+.nav-item .nav-link{
+    color:#fff;
 }
-.two{
+.first {
+    border: 2px solid #009ad8;
+}
+
+
+.main{
+    background-image: url(../images/banner.png);
+}
+
+.input-group input{
+    background-color: #1e202b;
+}
+.input-group input::placeholder{
+    color:#ccc;
+}
+.input-group button{
+    transform: translateY(-50%);
+    top:50%;
+    right:0.5rem;
+}
+
+.item{
+    color: #bfc1c8;
+    background-color: #323544;
+    padding: 0;
+}
+.item .header{
+    background: rgba(0, 0, 0, 0.1);
+}
+.item p{
+    color:#009ad8
+}
+
+.footer{
     background-color: #262936;
 }
-input[type="button"]{
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            bottom: 5px;
-            padding: 0px 50px;
-            border-radius: 30px;
-            
-
+.footer .input-group button{
+    right:32rem;
 }
+.icons a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color:#1e202b;
+    margin: 0 1rem;
+    position: relative;
+    transition: all 1s;
+}
+.icons a:hover{
+    background-color: #009ad8;
+}
+.icons a:hover i{
+    color:#fff;
+}
+ i{
+    font-size: 1.5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color:#009ad8;
+    
+}
+

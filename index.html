@@ -4,88 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
-    <link rel="stylesheet" href="css/all.css">
+    
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
    <link rel="stylesheet" href="css/week12.css">
 </head>
 <body>
-    <div class="container ">
-        <form class="mt-3  text-center position-relative ">
-            <input type="text" class="w-100 mx-auto rounded-5 p-3  mb-3 text-light " 
-            placeholder ="Find Your Location..." id="searchInput" >
-            <input type="button" value="find" class="btn btn-primary   ">
-        </form>
-        <div class="row ">
-            <div class="item rounded-4 col-md-4  ">
-                <div class="d-flex justify-content-between p-3 bg-main-color text-light rounded-start " id="today-date">
-                    <p id="today-date-name" class="my-auto">Sunday</p>
-                    <span>
-                        <span id="today-date-number" class="my-auto ">30</span>
-                        <span id="today-date-month" class="my-auto ">May</span>
-                    </span>
+    <nav class="navbar navbar-expand-lg navbar-light   ">
+        <div class="container">
+            <a class="navbar-brand d-flex " href="#">
+                <img src="images/logo.png"  alt="">
+                <div class="ms-3">
+                    <h1 class="site-title">Weather</h1>
+                    <small class="site-desc">tagline goes here</small>
                 </div>
-                <div class="item-content text-start p-3 pt-5 text-light " id="today">
-                    <p id="today-location" class="fs-4">Cairo</p>
-                    <div class="d-flex justify-content-between  align-items-center ">
-                        <span class="info ">
-                            <span id="today-temp">20</span>
-                            <span><sup>0</sup>C</span>
-                        </span>
-                        <img src="images/116.webp" alt="" id="today-condition-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item first">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="container">
+            <div class="input-group mb-3 py-5 ">
+                <input type="text" class="w-100 border-0 rounded-5 position-relative p-3 text-white "  placeholder="Find your location..." aria-label="Recipient's username" aria-describedby="button-addon1" id="search" >
+                <button class="btn btn-primary border-0 rounded-5 position-absolute py-2 px-5 fw-light  " type="button" id="button-addon1">Find</button>
+            </div>
+            <div class="row gx-3 ">
+                <div class="col-md-3 ">
+                    <div class="item rounded-4 pb-3">
+                        <div class="header d-flex justify-content-between p-3 ">
+                            <div id="today">Sunday</div>
+                            <div>
+                                <span id="todayNum">14</span>
+                                <span id="todayMonth">jan</span>
+                            </div>
+                        </div>
+                        <div class="location  my-5 mx-3 " id="city">Cairo</div>
+                        <div class="weather-info d-flex justify-content-between  align-items-center  text-white  my-2 mx-3" >
+                            <h1 class="degree display-1" id="temp">18
+                                <span class="num display-3 "><sup>o</sup>C</span>
+                            </h1>
+                            <div class="forecast-icon">
+                                <img src="images/116.webp" alt="" id="icon">
+                            </div>
+                        </div>
+                        <p class="mx-3" id="text">Good</p>
+                        <div class="weatehr-icons d-flex justify-content-between mx-3">
+                            <div >
+                                <img src="images/icon-umberella.png" alt=""> 
+                                <span id="humidity">20%</span>
+                            </div>
+                            <div>
+                                <img src="images/icon-wind.png" alt="">
+                                <span id="windSpeed">18KM/H</span> 
+                            </div>
+                            <div>
+                                <img src="images/icon-compass.png" alt="">
+                                <span id="windDirection">East</span> 
+                            </div>
+                        </div>
                     </div>
-                    <p id="today-condition-text" class="fs-6 text-light-blue">Sunny</p>
                 </div>
-                <div class="d-flex justify-content-between my-2 px-3">
-                    <span class="">
-                        <img src="images/icon-umberella.png" alt=""> 20%
-                    </span>
-                    <span class="">
-                        <img src="images/icon-wind.png" alt=""> 30 KM/H
-                    </span>
-                    <span class="">
-                        <img src="images/icon-compass.png" alt=""> NNE
-                    </span>
+                <div class="col-md-3 ">
+                    <div class="item rounded-4 text-center ">
+                        <div class="day header p-3 next-day">Sunday</div>
+                        <div class="pb-3">
+                            <img src="images/113.webp" alt="" class="next-img">
+                        </div>
+                        <h4 class="degree text-white py-4 max-Temp" >18
+                            <span class="num  "><sup>o</sup>C</span>
+                        </h4>
+                        <h6 class="degree min-Temp">18
+                            <span class="num"><sup>o</sup></span>
+                        </h6>
+                        <p class="mx-2 py-5 cond">Partly cloudy</p>
+                    </div>
                 </div>
-            </div>
-            <div class="item two rounded-4  col-md-4  text-center ">
-                <div class="d-flex justify-content-center p-3 bg-main-color text-light rounded-start " id="tomorrow-date">
-                    <p id="next-date-name" class="my-auto ">Friday</p>
+                <div class="col-md-3 ">
+                    <div class="item rounded-4 text-center">
+                        <div class="day header p-3 next-day">Sunday</div>
+                        <div class="pb-3">
+                            <img src="images/113.webp" alt="" class="next-img">
+                        </div>
+                        <h4 class="degree text-white py-4 max-Temp">18
+                            <span class="num  "><sup>o</sup>C</span>
+                        </h4>
+                        <h6 class="degree min-Temp">18
+                            <span class="num"><sup>o</sup></span>
+                        </h6>
+                        <p class="mx-2 py-5 cond" >Partly cloudy</p>
+                    </div>
                 </div>
-                <div class="item-content text-start p-3 pt-5 text-light text-center" id="tomorrow">
-                   <img src="images/113.webp" alt="" id="next-coniditon-img">
-                   <h3>
-                    <span class="next-max-temp"></span>
-                    <span>19.1 <sup>0</sup>C</span>
-                   </h3>
-                   <h5 class="text-muted ">
-                    <span class="next-min-temp"></span>
-                    <span>11.1 <sup>0</sup>C</span>
-                   </h5>
-                    <p id="next-condition-text" class="fs-6 text-light-blue">Partly Cloudy</p>
-                </div>
-            </div>
-            <div class="item rounded-4 col-md-4  text-center ">
-                <div class="d-flex justify-content-center p-3 bg-main-color text-light rounded-start " id="tomorrow-date">
-                    <p id="next-date-name" class="my-auto ">Friday</p>
-                </div>
-                <div class="item-content text-start p-3 pt-5 text-light text-center" id="tomorrow">
-                    <img src="images/113.webp" alt="" id="next-coniditon-img">
-                    <h3>
-                        <span class="next-max-temp"></span>
-                        <span>19.1 <sup>0</sup>C</span>
-                    </h3>
-                    <h5 class="text-muted ">
-                        <span class="next-min-temp"></span>
-                        <span>11.1 <sup>0</sup>C</span>
-                    </h5>
-                    <p id="next-condition-text" class="fs-6 text-light-blue">Partly Cloudy</p>
+                <div class="col-md-3 ">
+                    <div class="item rounded-4 text-center">
+                        <div class="day header p-3 next-day">Sunday</div>
+                        <div class="pb-3">
+                            <img src="images/113.webp" alt="" class="next-img">
+                        </div>
+                        <h4 class="degree text-white py-4 max-Temp">18
+                            <span class="num  "><sup>o</sup>C</span>
+                        </h4>
+                        <h6 class="degree min-Temp">18
+                            <span class="num"><sup>o</sup></span>
+                        </h6>
+                        <p class="mx-2 py-5 cond">Partly cloudy</p>
+                    </div>
                 </div>
             </div>
             
         </div>
+
     </div>
+    <div class="footer py-5">
+        <div class="container ">
+            <div class="d-flex justify-content-between ">
+                <div class="input-group mb-3  ">
+                    <input type="text" class="w-50  border-0 rounded-5 position-relative p-3 "
+                        placeholder="Enter your email to subscribe..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-primary border-0 rounded-5 position-absolute py-2 px-5 fw-light  " type="button"
+                        id="button-addon2">Subscribe</button>
+                </div>
+                <div class="icons d-flex justify-content-between ">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+            <p class="text-white-50 ">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    
+    </div>
+  
+   
+
+    
+        
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="week12.js"></script>
+    <script src="js/week12.js"></script>
     
 </body>
 </html>

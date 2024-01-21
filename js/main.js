@@ -28,7 +28,7 @@ find.addEventListener("click",function(){
 
 
 async function weatherData(name){
-    let req= await fetch(`https://api.weatherapi.com/v1/forecast.json?key=f3b6cacf02c74d6a8c5141335241101&q=${name}&days=4`)
+    let req= await fetch(`https://api.weatherapi.com/v1/forecast.json?key=f3b6cacf02c74d6a8c5141335241101&q=${name}&days=3`)
     dataWeather = await req.json()
     forecastData=dataWeather.forecast.forecastday
     
